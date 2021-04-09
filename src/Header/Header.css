@@ -5,6 +5,11 @@
     display:flex;
     justify-content: space-between;
 }
+.Button{
+    height:100%;
+    width:25%;
+    background: #c34a36;
+}
 .Image{
     height:100%;
 }

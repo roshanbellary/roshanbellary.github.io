@@ -23,6 +23,25 @@ class Image extends React.Component{
         );
     }
 }
+class Button extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = { redirect: null };
+    }
+    switch(){
+        this.setState({ redirect: this.props.path});
+    }
+    render(){
+        if (this.state.redirect) {
+            return (<Redirect to={this.state.redirect} />);
+        }
+        return(
+            <button class="Button" onClick={()=>this.switch()}>
+                <Image name={this.props.name} path={this.props.path}></Image>
+            </button>
+        );
+    }
+}
 class Header extends React.Component{
     constructor(props){
         super(props);
@@ -30,10 +49,10 @@ class Header extends React.Component{
     render(){
         return(
             <div className="Header">
-                <Image name={home} path="/"></Image>
-                <Image name={math} path="/Math"></Image>
-                <Image name={science} path="/Science"></Image>
-                <Image name={accomplishments} path="/Accomplishments"></Image>
+                <Button name={home} path="/"></Button>
+                <Button name={math} path="/Math"></Button>
+                <Button name={science} path="/Science"></Button>
+                <Button name={accomplishments} path="/Accomplishments"></Button>
             </div>
         )
     }
