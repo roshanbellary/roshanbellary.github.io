@@ -4,7 +4,6 @@ import './Math.css';
 import Header from '../Header/Header.js';
 import Footer from '../Footer/Footer.js';
 function Math(props){
-    let history=useHistory();
     return(
         <div>
         <Header></Header>

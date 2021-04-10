@@ -10,7 +10,7 @@ class Science extends React.Component{
         return(
             <div>
             <Header></Header>
-            <h1>Science </h1>
+            <h1 class="Title">Science </h1>
             <p>
                 Computer Science and Physics are two of the main subjects that I have focused on in the sciences. I've attended
                 Aops' Woot program in physics and am currently USACO gold for computer science. I hope to improve in computer science, but

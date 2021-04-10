@@ -3,6 +3,8 @@
     height:50px;
     background: #c34a36;
     display:flex;
+    position:fixed;
+    top:0;
     justify-content: space-between;
 }
 .Button{

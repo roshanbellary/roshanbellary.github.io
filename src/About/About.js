@@ -1,13 +1,15 @@
 import React from 'react';
 import { useHistory } from "react-router-dom";
 import './About.css';
+import roshan from './resources/roshan.jpeg'
 import Header from '../Header/Header.js';
 import Footer from '../Footer/Footer.js';
 function About(props){
-    let history=useHistory();
     return(
         <div>
             <Header ></Header>
+            <div class="paralax">
+            </div>
             <h1 class = 'Title'>Roshan Bellary-A Professional Idiot</h1>
             <p class="Ramble">
                 To whom it may concern: Hi guys! My name is Roshan Bellary, a 10th grader in California. I'm currently 16 years old, but

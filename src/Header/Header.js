@@ -9,17 +9,10 @@ import home from './resources/home.png';
 class Image extends React.Component{
     constructor(props){
         super(props);
-        this.state = { redirect: null };
-    }
-    switch(){
-        this.setState({ redirect: this.props.path});
     }
     render(){
-        if (this.state.redirect) {
-            return (<Redirect to={this.state.redirect} />);
-        }
         return(
-            <img class="Image" onClick={()=>this.switch()} src={this.props.name}></img>
+            <img class="Image" src={this.props.name}></img>
         );
     }
 }

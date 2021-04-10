@@ -6,13 +6,24 @@
 }
 .Ramble{
     color:#C34A46;
-    padding-left: 300px;
+    text-align: center;
 }
 .Link{
     color:#C34A46;
-    padding-left:300px;
+    text-align: center;
 }
 #div{
     float:right;
     
+}
+.Images{
+    width:100%;
+}
+.paralax{
+    background-image:url("./resources/roshan.jpeg");
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
