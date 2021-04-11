@@ -11,17 +11,20 @@
     height:100%;
     width:25%;
     background: #c34a36;
-}
-.Image{
-    height:100%;
-}
-.container{
+    border:none;
     display:flex;
     align-items: center;
     justify-content: center;
 }
-.Text{
+.Image{
+    height:100%;
+    display:inline-block;
+}
+.Texts{
     padding-left: 20px;
+    display:inline-block;
+    font-size:20px;
+    font-weight:bold;
 }
 .Button:hover{
     filter: brightness(85%);

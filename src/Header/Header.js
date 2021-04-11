@@ -31,6 +31,7 @@ class Button extends React.Component{
         return(
             <button class="Button" onClick={()=>this.switch()}>
                 <Image name={this.props.name} path={this.props.path}></Image>
+                <p class="Texts">{this.props.names}</p>
             </button>
         );
     }
@@ -42,10 +43,10 @@ class Header extends React.Component{
     render(){
         return(
             <div className="Header">
-                <Button name={home} path="/"></Button>
-                <Button name={math} path="/Math"></Button>
-                <Button name={science} path="/Science"></Button>
-                <Button name={accomplishments} path="/Accomplishments"></Button>
+                <Button name={home} names="Home" path="/"></Button>
+                <Button name={math} names="Math" path="/Math"></Button>
+                <Button name={science} names="Science" path="/Science"></Button>
+                <Button name={accomplishments} names="Accomplishments" path="/Accomplishments"></Button>
             </div>
         )
     }
