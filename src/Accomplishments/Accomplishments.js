@@ -10,7 +10,7 @@ class Accomplishments extends React.Component{
         return(
             <div>
                 <Header></Header>
-                <h1 class="Push"> HI</h1>
+                <h1 class="Push"> Accomplishments</h1>
                 <Footer></Footer>
             </div>
         );
