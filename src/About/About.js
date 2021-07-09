@@ -1,7 +1,5 @@
 import React from 'react';
-import { useHistory } from "react-router-dom";
 import './About.css';
-import roshan from './resources/roshan.jpeg'
 import Header from '../Header/Header.js';
 import Footer from '../Footer/Footer.js';
 function About(props){
