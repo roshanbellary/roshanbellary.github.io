@@ -1,0 +1,6 @@
+#navbar-vert{
+    position:fixed;
+    left:97%;
+    transform:translateY(-50%);
+    top: 50%;
+}

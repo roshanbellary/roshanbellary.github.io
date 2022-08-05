@@ -1,29 +1,28 @@
 import './App.css';
-import About from '../About/About.js';
-import Math from '../Math/Math.js';
-import Science from '../Science/Science.js';
-import Accomplishments from '../Accomplishments/Accomplishments.js';
-import {BrowserRouter, Route, Switch} from "react-router-dom";
-import React from 'react';
-class Bar extends React.Component{
-  
-}
-class App extends React.Component{
-  constructor(props){
-    super(props);
-  }
-  render(){
-    return(
-      <BrowserRouter>
-        <Switch>
-          <Route path='/' exact component={About}/>
-          <Route path='/Math' exact component={Math}/>
-          <Route path='/Science' exact component={Science}/>
-          <Route path='/Accomplishments' exact component={Accomplishments}/>
-        </Switch>
-      </BrowserRouter>
-    )
-  }
+import Matrix from '../Components/MatrixBackground/Matrix.js';
+import Description from '../Components/Description/Description';
+import Math from '../Components/Math/Math';
+import Physics from '../Components/Physics/Physics';
+import Computer from '../Components/Computers/Computers';
+import Navigation from '../Components/Navigation/Navigation';
+import Resume from '../Components/Resume/Resume';
+import {React, useEffect} from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+function App(){
+  useEffect(() => {
+    AOS.init();
+  }, []);
+  return(
+    <div className="App" style={{background:"#000000"}}>
+        <Navigation/>
+        <Description/>
+        <Computer/>
+        <Math/>
+        <Physics/>
+        <Resume/>
+      </div>
+  );
 }
 
 export default App;

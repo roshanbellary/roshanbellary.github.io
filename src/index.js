@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App/App.js';
 import './index.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 class Website extends React.Component{
   render(){
       return(
