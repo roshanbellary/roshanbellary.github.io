@@ -7,10 +7,10 @@ class Description extends React.Component{
         super(props);
     }
     render(){
-        console.log(window.innerHeight);
         const barStyle = {
-            height: "10px",
+            height: "100%",
             position: "absolute",
+            left: "50%",
             zIndex: -1,
             backgroundColor: "white",
             width: "10px"
@@ -23,11 +23,12 @@ class Description extends React.Component{
         return(
             <Container style={{height:window.innerHeight}}>
                 <div class="typewriter">
-                    <div class="typewriter-text">
+                    <div key={Math.random()} class="typewriter-text">
                         Roshan Bellary
                     </div>
                 </div>
                 <div style={{marginTop:"220px"}} data-aos="fade-right">
+                    <div style={barStyle}/>
                     <p style={textStyle}>
                         Programmer
                     </p>

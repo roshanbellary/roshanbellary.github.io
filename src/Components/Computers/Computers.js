@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container, Card, Row, Col} from 'react-bootstrap';
+import {Container, Card, Row, Col, Collapse} from 'react-bootstrap';
 import "./Computers.css";
 import "aos/dist/aos.css";
 class Computer extends React.Component{
@@ -46,29 +46,29 @@ class Computer extends React.Component{
                     <Row style={{height:"100px", marginTop:"100px"}}>
                         <Col>
                             <Card style={cardStyles[0]} onMouseEnter={() => this.setState({cardbgcolor:poss[0]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})}>
-                                <Card.Footer>
+                                <Card.Body>
                                     <div style={textStyle}>
                                         Data Analysis
                                     </div>
-                                </Card.Footer>
+                                </Card.Body>
                             </Card>
                         </Col>
                         <Col>
                             <Card style={cardStyles[1]} onMouseEnter={() => this.setState({cardbgcolor:poss[1]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})}>
-                                <Card.Footer>
+                                <Card.Body>
                                     <div style={textStyle}>
                                         Frontend Development
                                     </div>
-                                </Card.Footer>
+                                </Card.Body>
                             </Card>
                         </Col>
                         <Col>
                             <Card style={cardStyles[2]} onMouseEnter={() => this.setState({cardbgcolor:poss[2]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})}>
-                                <Card.Footer>
+                                <Card.Body>
                                     <div style={textStyle}>
                                         Competitive Programming
                                     </div>                                   
-                                </Card.Footer>
+                                </Card.Body>
                             </Card>
                         </Col>
                     </Row>
