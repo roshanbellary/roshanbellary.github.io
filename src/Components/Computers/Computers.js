@@ -2,6 +2,27 @@ import React from 'react';
 import {Container, Card, Row, Col, Collapse} from 'react-bootstrap';
 import "./Computers.css";
 import "aos/dist/aos.css";
+class Analyst extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        if (this.props.show){
+            return(
+                <Container className="whitespace-nowrap">
+                    <div class="left"/>
+                    <div class="center">
+                    </div>
+                    <div class="right"/>
+                </Container>
+            )
+        }else{
+            return(
+                <div/>
+            )
+        }
+    }
+}
 class Computer extends React.Component{
     constructor(props){
         super(props);
@@ -73,6 +94,9 @@ class Computer extends React.Component{
                         </Col>
                     </Row>
                 </div>
+                <Row className="display-flex">
+                    <Analyst show={true}/>
+                </Row>
             </Container>
         )
     }
