@@ -7,7 +7,7 @@ class Math extends React.Component{
     render(){
         return(
             <Container style={{height:window.innerHeight}}>
-                <div class="header-text">
+                <div class="header-text" data-aos="fade-right">
                     Mathematics
                 </div>
             </Container>

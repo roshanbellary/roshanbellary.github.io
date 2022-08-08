@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-function MatrixBackground({ timeout = 50 }) {
+function MatrixBackground({ timeout = 100 }) {
     const canvas = useRef();
 
     useEffect(() => {
@@ -10,6 +10,7 @@ function MatrixBackground({ timeout = 50 }) {
         canvas.current.width = width;
         canvas.current.height = height;
         context.fillStyle = '#000';
+        context.globalAlpha = 0.5;
         context.fillRect(0, 0, width, height);
         const columns = Math.floor(width / 20) + 1;
         const yPositions = Array.from({ length: columns }).fill(0);
@@ -49,7 +50,6 @@ function MatrixBackground({ timeout = 50 }) {
                 position: 'fixed',
                 height: '100%',
                 width: '100%',
-                zIndex: -1,
                 left: '0',
                 top: '0',
             }}

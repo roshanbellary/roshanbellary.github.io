@@ -2,7 +2,7 @@
     font-family: Menlo, monospace;
     color: #29FE13;
 	display: inline-block;
-
+    z-index:1;
 }
 .typewriter-text {
     display: inline-block;
@@ -15,6 +15,7 @@
     padding:0px;
     border-right: 8px solid #29FE13;
     box-sizing: border-box;
+    z-index:1;
 }
 
 @keyframes typing {

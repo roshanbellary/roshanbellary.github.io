@@ -1,53 +1,66 @@
-import React from 'react';
-import {Container} from 'react-bootstrap';
+import {React,useEffect, useCallback, useState} from 'react';
+import {Container, Col} from 'react-bootstrap';
 import "./Description.css";
 import "aos/dist/aos.css";
-class Description extends React.Component{
-    constructor(props){
-        super(props);
+function Description(){
+    const barStyle = {
+        height: "50px",
+        margin:"auto",
+        backgroundColor: "white",
+        width: "2px"
+    };
+    const textStyle = {
+        fontFamily: "Menlo",
+        color:"#29FE13",
+        fontSize:"20px",
+        marginBottom:"0px"
     }
-    render(){
-        const barStyle = {
-            height: "50px",
-            margin:"auto",
-            backgroundColor: "white",
-            width: "2px"
+    let containerStyle = {
+        top: "50%",
+        left: "50%",
+        marginTop: (parseInt(window.innerHeight/2)-170).toString()+"px"
+    };
+    console.log((toString(window.innerHeight/2-75)+"px"));
+    const [y, setY] = useState(window.scrollY);
+    const [key, setKey] = useState(Math.random());
+    const handleNavigation = useCallback(
+        e => {
+          const window = e.currentTarget;
+          if (y > window.scrollY && window.scrollY<=75) {
+            setKey(Math.random());
+          }
+          setY(window.scrollY);
+        }, [y]
+      );
+      useEffect(() => {
+        setY(window.scrollY);
+        window.addEventListener("scroll", handleNavigation);
+      
+        return () => {
+          window.removeEventListener("scroll", handleNavigation);
         };
-        const textStyle = {
-            fontFamily: "Menlo",
-            color:"#29FE13",
-            fontSize:"20px",
-            marginBottom:"0px"
-        }
-        const containerStyle = {
-            margin: "0",
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)"
-        };
-        return(
-            <Container style={{height:window.innerHeight}}>
-                <div class="typewriter">
-                    <div key={Math.random()} class="typewriter-text">
-                        Roshan Bellary
-                    </div>
+      }, [handleNavigation]);
+    return(
+        <Container style={{height:window.innerHeight}}>
+            <div class="typewriter" data-aos="fade-right">
+                <div key={key} class="typewriter-text">
+                    Roshan Bellary
                 </div>
-                <div style={containerStyle} data-aos="fade-right">
-                    <p style={textStyle}>
-                        Programmer
-                    </p>
-                    <div style={barStyle}/>
-                    <p style={textStyle}>
-                        Mathematician
-                    </p>
-                    <div style={barStyle}/>
-                    <p style={textStyle}>
-                        Researcher
-                    </p>
-                </div>
-            </Container>
-        )
-    }
+            </div>
+            <div style={containerStyle} data-aos="fade-right">
+                <p style={textStyle}>
+                    Programmer
+                </p>
+                <div style={barStyle}/>
+                <p style={textStyle}>
+                    Mathematician
+                </p>
+                <div style={barStyle}/>
+                <p style={textStyle}>
+                    Researcher
+                </p>
+            </div>
+        </Container>
+    )
 }
 export default Description;

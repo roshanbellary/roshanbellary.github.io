@@ -2,32 +2,12 @@ import React from 'react';
 import {Container, Card, Row, Col, Collapse} from 'react-bootstrap';
 import "./Computers.css";
 import "aos/dist/aos.css";
-class Analyst extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        if (this.props.show){
-            return(
-                <Container className="whitespace-nowrap">
-                    <div class="left"/>
-                    <div class="center">
-                    </div>
-                    <div class="right"/>
-                </Container>
-            )
-        }else{
-            return(
-                <div/>
-            )
-        }
-    }
-}
 class Computer extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            cardbgcolor:["#000000","#000000","#000000"]
+            cardbgcolor:["#000000","#000000","#000000"],
+            show:[false, false, false]
         }
     }
     render(){
@@ -52,6 +32,13 @@ class Computer extends React.Component{
             fontFamily: "Menlo",
             color:"#29FE13",
         };
+        const descripStyle={
+            height:"400px",
+            width:"100%",
+            backgroundColor:"black",
+            borderColor:"#FFFFFF",
+            borderWidth:"2px"
+        };
         let poss = [
             ["#FFFFFF","#000000","#000000"],
             ["#000000","#FFFFFF","#000000"],
@@ -60,42 +47,75 @@ class Computer extends React.Component{
         ];
         return(
             <Container style={{height:window.innerHeight}}>
-                <div class="header-text">
+                <div class="header-text" data-aos="fade-right">
                     Programming
                 </div>
-                <div data-aos="fade-up">
-                    <Row style={{height:"100px", marginTop:"100px"}}>
-                        <Col>
-                            <Card style={cardStyles[0]} onMouseEnter={() => this.setState({cardbgcolor:poss[0]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})}>
+                <Row style={{height:"100px", marginTop:"100px"}}>
+                    <Col>
+                        <div data-aos="fade-right">
+                            <Card style={cardStyles[0]} onMouseEnter={() => this.setState({cardbgcolor:poss[0]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})} onClick={()=>{this.setState({show:[true,false,false]})}}>
                                 <Card.Body>
                                     <div style={textStyle}>
                                         Data Analysis
                                     </div>
                                 </Card.Body>
                             </Card>
-                        </Col>
-                        <Col>
-                            <Card style={cardStyles[1]} onMouseEnter={() => this.setState({cardbgcolor:poss[1]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})}>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div data-aos="fade-up">
+                            <Card style={cardStyles[1]} onMouseEnter={() => this.setState({cardbgcolor:poss[1]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})} onClick={()=>{this.setState({show:[false,true,false]})}}>
                                 <Card.Body>
                                     <div style={textStyle}>
                                         Frontend Development
                                     </div>
                                 </Card.Body>
                             </Card>
-                        </Col>
-                        <Col>
-                            <Card style={cardStyles[2]} onMouseEnter={() => this.setState({cardbgcolor:poss[2]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})}>
+                        </div>
+                    </Col>
+                    <Col>
+                        <div data-aos="fade-left">
+                            <Card style={cardStyles[2]} onMouseEnter={() => this.setState({cardbgcolor:poss[2]})} onMouseLeave={()=> this.setState({cardbgcolor:poss[3]})} onClick={()=>{this.setState({show:[false,false,true]})}}>
                                 <Card.Body>
                                     <div style={textStyle}>
                                         Competitive Programming
                                     </div>                                   
                                 </Card.Body>
                             </Card>
-                        </Col>
-                    </Row>
-                </div>
+                        </div>
+                    </Col>
+                </Row>
                 <Row className="display-flex">
-                    <Analyst show={true}/>
+                    <Collapse in={this.state.show[0]} dimension="width" timeout="500">
+                        <Card style={descripStyle} onClick={()=>this.setState({show:[false,false,false]})}>
+                            <Card.Title>
+
+                            </Card.Title>
+                            <Card.Body>
+                                <p>
+                                    HI!
+                                </p>
+                            </Card.Body>
+                        </Card>
+                    </Collapse>
+                    <Collapse in={this.state.show[1]} dimension="width" timeout="500">
+                        <Card style={descripStyle} onClick={()=>this.setState({show:[false,false,false]})}>
+                            <Card.Body>
+                                <p>
+                                    HI!
+                                </p>
+                            </Card.Body>
+                        </Card>
+                    </Collapse>
+                    <Collapse in={this.state.show[2]} dimension="width" timeout="500">
+                        <Card style={descripStyle} onClick={()=>this.setState({show:[false,false,false]})}>
+                            <Card.Body>
+                                <p>
+                                    HI!
+                                </p>
+                            </Card.Body>
+                        </Card>
+                    </Collapse>
                 </Row>
             </Container>
         )

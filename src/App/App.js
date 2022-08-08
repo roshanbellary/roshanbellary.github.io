@@ -12,16 +12,21 @@ import MatrixBackground from '../Components/MatrixBackground/Matrix.js';
 function App(){
   useEffect(() => {
     AOS.init();
+    AOS.init({
+      mirror:true,
+      once: false,
+    })
   }, []);
   return(
-    <div className="App" style={{background:"#000000"}}>
-        <Navigation/>
-        <Description/>
-        <Computer/>
-        <Math/>
-        <Physics/>
-        <Resume/>
-      </div>
+    <div className="App">
+      <MatrixBackground/>
+      <Navigation/>
+      <Description/>
+      <Computer/>
+      <Math/>
+      <Physics/>
+      <Resume/>
+    </div>
   );
 }
 

@@ -3,55 +3,6 @@
     font-size: 50px;
     font-weight:700;
     color: #29FE13;
-}
-.left{
-    display: inline-block;
-    width:20px;
-    height:200px;
-    border-radius: 20px 0 0 20px;
-    background-color: black;
-    border-width: 5px;
-    border-color: white;
-}
-.right{
-    display: inline-block;
-    width:20px;
-    height:200px;
-    border-radius: 0 20px 20px 0;
-    transform: translateX(-1px);
-    animation: right-animate 1s ease infinite alternate;
-    background-color: black;
-    border-width: 5px;
-    border-color: white;
-}
-.center{
-    display: inline-block;
-    left: 20px;
-    width: 1px;
-    height: 200px;
-    transform: scaleX(60);
-    transform: translateX(-2px);
-    transform-origin: left;
-    animation: center-animate 1s ease infinite alternate;
-    background-color: black;
-    border-width: 5px;
-    border-color: white;
-}
-@keyframes right-animate {
-    0% {
-        transform: translateX(120px);
-    }
-    100% {
-        transform: translateX(-1px);
-    }
-}
-@keyframes center-animate {
-    0% {
-        transform: scaleX(121);
-        transform:translateX(-2px);
-    }
-    100% {
-        transform: scaleX(1);
-        transform:translateX(-2px);
-    }
+    z-index: 1;
+    visibility: visible !important;
 }
