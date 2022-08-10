@@ -1,5 +1,6 @@
 import {React,useEffect, useCallback, useState} from 'react';
-import {Container, Col} from 'react-bootstrap';
+import {Container} from 'react-bootstrap';
+import Typewriter from "typewriter-effect";
 import "./Description.css";
 import "aos/dist/aos.css";
 function Description(){
@@ -20,9 +21,20 @@ function Description(){
         left: "50%",
         marginTop: (parseInt(window.innerHeight/2)-170).toString()+"px"
     };
-    console.log((toString(window.innerHeight/2-75)+"px"));
     const [y, setY] = useState(window.scrollY);
     const [key, setKey] = useState(Math.random());
+    const [width, setWidth] = useState(window.innerWidth);
+    const [height, setHeight] = useState(window.innerHeight);
+    useEffect(()=>{
+        function handleResize(){
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight);
+        }
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener("resize", handleResize);
+          };
+    })
     const handleNavigation = useCallback(
         e => {
           const window = e.currentTarget;
@@ -41,7 +53,7 @@ function Description(){
         };
       }, [handleNavigation]);
     return(
-        <Container style={{height:window.innerHeight}}>
+        <Container style={{height:height}}>
             <div class="typewriter" data-aos="fade-right">
                 <div key={key} class="typewriter-text">
                     Roshan Bellary
@@ -59,6 +71,16 @@ function Description(){
                 <p style={textStyle}>
                     Researcher
                 </p>
+            </div>
+            <div data-aos="fade-left" className="set-font" style={{marginTop:"100px"}}>
+                <Typewriter
+                options={{
+                    strings: ["The name's Bellary, Roshan Bellary.", "I\'m a rising senior at Valley Christian High School interested in....","CS, Business and Physics"],
+                    autoStart: true,
+                    loop: true,
+                    delay: 30
+                  }}
+                />
             </div>
         </Container>
     )

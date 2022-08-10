@@ -17,6 +17,12 @@
     box-sizing: border-box;
     z-index:1;
 }
+.set-font {
+    font-size: 20px;
+    font-weight: 700;
+    color: #29FE13;
+    font-family: "Menlo";
+}
 
 @keyframes typing {
     from { 

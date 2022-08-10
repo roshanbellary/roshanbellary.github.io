@@ -1,8 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 function MatrixBackground({ timeout = 100 }) {
     const canvas = useRef();
-
+    const [widthS, setWidth] = useState(window.innerWidth);
+    const [heightS, setHeight] = useState(window.innerHeight);
+    useEffect(()=>{
+        function handleResize(){
+            setWidth(window.innerWidth);
+            setHeight(window.innerHeight);
+        }
+        window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener("resize", handleResize);
+          };
+    })
     useEffect(() => {
         const context = canvas.current.getContext('2d');
         const width = document.body.offsetWidth;
@@ -49,7 +60,7 @@ function MatrixBackground({ timeout = 100 }) {
                 overflow: 'hidden',
                 position: 'fixed',
                 height: '100%',
-                width: '100%',
+                width: widthS,
                 left: '0',
                 top: '0',
             }}
