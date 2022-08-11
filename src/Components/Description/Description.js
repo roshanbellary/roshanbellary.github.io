@@ -75,10 +75,11 @@ function Description(){
             <div data-aos="fade-left" className="set-font" style={{marginTop:"100px"}}>
                 <Typewriter
                 options={{
-                    strings: ["The name's Bellary, Roshan Bellary.", "I\'m a rising senior at Valley Christian High School interested in....","CS, Business and Physics"],
+                    strings: ["I\'m a rising senior at Valley Christian High School interested in....","CS, Business and Physics"],
                     autoStart: true,
                     loop: true,
-                    delay: 30
+                    delay: 30,
+                    deleteSpeed: 30
                   }}
                 />
             </div>

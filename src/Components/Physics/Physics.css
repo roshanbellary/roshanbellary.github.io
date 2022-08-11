@@ -6,6 +6,11 @@
     border-radius: 100% !important;
     border: "1px solid white";
 }
+.special-modal .modal-content{
+    background-color: #000;
+    color: #29FE13;
+    font-family: Menlo;
+}
 @keyframes spin {
     from {
         transform:rotate(0deg);
@@ -22,6 +27,9 @@
         transform: scale(1.5);
     }
 }
+.image-card{
+    animation: spin 10s infinite linear;
+}
 .earth:hover{
     animation: expand 1s forwards;
 }
@@ -30,6 +38,7 @@
     border-radius:50%;
     background:rgba(0,0,0,0);
     color:white;
+    margin-top:20px;
     margin-right: auto;
     margin-left:auto;
     align-items: center;
