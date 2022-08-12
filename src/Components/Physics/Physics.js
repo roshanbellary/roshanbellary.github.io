@@ -133,7 +133,9 @@ function Physics(){
                                     </Card.Title>
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px"}} >
-                                    <Card.Header/>
+                                    <Card.Body>
+                                        
+                                    </Card.Body>
                                 </Card>
                             </ReactCardFlip>
                         </Col>
@@ -146,7 +148,9 @@ function Physics(){
                                     </Card.Title>
                                 </Card>
                                 <Card>
-                                    <Card.Header/>
+                                    <Card.Body>
+
+                                    </Card.Body>
                                 </Card>
                             </ReactCardFlip>
                         </Col>
