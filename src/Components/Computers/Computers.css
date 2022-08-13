@@ -6,3 +6,14 @@
     z-index: 1;
     visibility: visible !important;
 }
+.flipicon:hover{
+    animation: spin 1s ease;
+}
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(180deg);
+    }
+}

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Col,Row} from 'react-bootstrap';
+import Social from '../Social/Social.js';
 import "./Navigation.css";
 class Circle extends React.Component{
     constructor(props){
@@ -53,7 +54,10 @@ function Navigation(){
     let i = 0;
     for (let v of pages){
         let style={
-            marginTop:"10px"
+            marginTop:"10px",
+            alignItems:"center",
+            width:"28px",
+            marginRight:"0px"
         };
         if (i==0) style={};
         compList.push(
@@ -71,10 +75,13 @@ function Navigation(){
         width: "1px"
     };
     return(
-        <Col id="navbar-vert">
-            <div style={barStyle}/>
-            {compList}
-        </Col>
+        <div>
+            <Social/>
+            <Col id="navbar-vert">
+                <div style={barStyle}/>
+                {compList}
+            </Col>
+        </div>
     )
 }
 export default Navigation;

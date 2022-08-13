@@ -65,7 +65,7 @@ function Description(){
                 </p>
                 <div style={barStyle}/>
                 <p style={textStyle}>
-                    Mathematician
+                    Entrepreneur
                 </p>
                 <div style={barStyle}/>
                 <p style={textStyle}>

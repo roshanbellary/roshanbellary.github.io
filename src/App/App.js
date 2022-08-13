@@ -1,6 +1,6 @@
 import './App.css';
 import Description from '../Components/Description/Description';
-import Math from '../Components/Math/Math';
+import Business from '../Components/Business/Business';
 import Physics from '../Components/Physics/Physics';
 import Computer from '../Components/Computers/Computers';
 import Navigation from '../Components/Navigation/Navigation';
@@ -23,7 +23,7 @@ function App(){
       <Navigation/>
       <Description/>
       <Computer/>
-      <Math/>
+      <Business/>
       <Physics/>
       <Resume/>
     </div>

@@ -3,4 +3,6 @@
     left:97%;
     transform:translateY(-50%);
     top: 50%;
+    width: 28px;
+    align-items: center;
 }

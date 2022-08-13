@@ -3,6 +3,7 @@ import {Container, Row, Col, Modal, Card} from 'react-bootstrap';
 import Typewriter from "typewriter-effect";
 import ReactCardFlip from 'react-card-flip';
 import physics from './Resources/physics.png';
+import flip from './Resources/flip.png'
 import "./Physics.css"
 function Physics(){
     const [width, setWidth] = useState(window.innerWidth);
@@ -74,16 +75,22 @@ function Physics(){
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseEnter={()=>{setUsapho(true);setCompet(false);}}>
                                     <Card.Header/>
                                     <Card.Title style={{textAlign:"center"}}>
-                                        Competitive Physics
+                                        <b>Competitive Physics</b>
                                     </Card.Title>
                                     <Card.Body>
                                         <Card.Img src={physics} className="image-card"/>
                                     </Card.Body>
+                                    <Card.Footer>
+                                        <Card.Img src={flip} style={{height:"30px", width:"30px", marginLeft:"auto", marginRight:"auto", display:"block", transform:"translateY(-50%)"}}/>
+                                    </Card.Footer>
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setUsapho(false);}}>
-                                    <Card.Body style={{color:"#29FE13"}}>
-                                        I placed in the <b>top 100 students</b> in the nation in the USA Physics Olympiad attaining a bronze medal.
+                                    <Card.Body style={{color:"#29FE13", textAlign:"center"}}>
+                                        I placed in the <b>top 100 students</b> in the nation in the USA Physics Olympiad attaining a <span style={{color:"#CD7F32"}}> Bronze</span> medal.
                                         In addition, I've also participated in other physics competitions such as the Online Physics Olympiad and Physics Bowl.
+                                        At VCHS, I co-founded and served as an officer for the USAPHO club which teaches members concepts in competitive physics
+                                        and prepares them for physics competitions. As an officer, I helped develop handouts
+                                        which broke up difficult to understand physics concepts into bite-sized chunks.
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
@@ -93,19 +100,22 @@ function Physics(){
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseEnter={()=>{setCompet(true); setUsapho(false);}}>
                                     <Card.Header/>
                                     <Card.Title style={{textAlign:"center"}}>
-                                        Academic Physics
+                                        <b>Academic Physics</b>
                                     </Card.Title>
                                     <Card.Body>
                                         <Card.Img src={physics} className="image-card"/>
                                     </Card.Body>
+                                    <Card.Footer>
+                                        <Card.Img src={flip} style={{height:"30px", width:"30px", marginLeft:"auto", marginRight:"auto", display:"block", transform:"translateY(-50%)"}}/>
+                                    </Card.Footer>
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setCompet(false);}}>
-                                    <Card.Body>
+                                    <Card.Body style={{textAlign:"center"}}>
                                         To deepen my knowledge of physics, I've done a combination of online courses,
                                         regular courses and read through physics books. I first studied physics through MIT's
                                         online OCW courses where I've gone through everything from Mechanics up to E&M.
                                         At VCHS, I've taken Ap Physics C E&M and Mechanics and received a 5 on both AP tests. Finally, I've read physics
-                                        books such as Feynman's lectures, Resnick and Halliday, and my personal favorite "Introduction to Mechanics" by David Morin.
+                                        books such as Feynman's lectures, Resnick and Halliday, and my personal favorite <em>Introduction to Mechanics</em> by David Morin.
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
@@ -117,7 +127,7 @@ function Physics(){
                 <Modal.Header closeButton>
                     <Modal.Title>
                         <Typewriter onInit={(typewriter)=>{
-                            typewriter.typeString('Physics Research')
+                            typewriter.typeString('Physics Research In Space')
                             .start();
                         }}/>
                     </Modal.Title>
@@ -126,30 +136,50 @@ function Physics(){
                     <Row>
                         <Col>
                             <ReactCardFlip isFlipped={flipFuel}>
-                                <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px"}} >
+                                <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px"}} onMouseEnter={()=>{setFuel(true);setFerro(false);}}>
                                     <Card.Header/>
                                     <Card.Title style={{textAlign:"center"}}>
-                                        Microgravity Microbial Fuel Cell
+                                        <b>Microgravity MFC</b>
                                     </Card.Title>
-                                </Card>
-                                <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px"}} >
                                     <Card.Body>
-                                        
+                                        <Card.Img src={physics} className="image-card"/>
+                                    </Card.Body>
+                                    <Card.Footer>
+                                        <Card.Img src={flip} style={{height:"30px", width:"30px", marginLeft:"auto", marginRight:"auto", display:"block", transform:"translateY(-50%)"}}/>
+                                    </Card.Footer>
+                                </Card>
+                                <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setFuel(false);}}>
+                                    <Card.Body style={{textAlign:"center", overflowY:"auto"}}>
+                                        I led the development and research of an experiment which studied the efficacy of
+                                        a biofilm microbial fuel cell in microgravity. Using a S. Oneidensis(an electroactive bacteria) biofilm on the anodic side of the cell, 
+                                        we constructed and sent a fully functioning microgravity microbial fuel cell up 
+                                        to the International Space Station to test its voltage production over time.
+                                        We are currently in the middle of publishing our research paper detailing our results.
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
                         </Col>
                         <Col>
                             <ReactCardFlip isFlipped={flipFerro}>
-                                <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px"}} >
+                                <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseEnter={()=>{setFerro(true);setFuel(false);}}>
                                     <Card.Header/>
                                     <Card.Title style={{textAlign:"center"}}>
-                                        Ferrofluid Energy Transfer
+                                        <b>Ferrofluid Energy Transfer</b>
                                     </Card.Title>
-                                </Card>
-                                <Card>
                                     <Card.Body>
-
+                                        <Card.Img src={physics} className="image-card"/>
+                                    </Card.Body>
+                                    <Card.Footer>
+                                        <Card.Img src={flip} style={{height:"30px", width:"30px", marginLeft:"auto", marginRight:"auto", display:"block", transform:"translateY(-50%)"}}/>
+                                    </Card.Footer>
+                                </Card>
+                                <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setFerro(false);}}>
+                                    <Card.Body style={{textAlign:"center", overflowY:"auto"}}>
+                                        I worked as the deputy lead of a team which studied the efficacy of using
+                                        ferrofluid as a method of energy transfer in microgravity. 
+                                        We developed and sent a chamber to the ISS which heated ferrofluid on one end and used electromagnets to propel the fluid
+                                        to the other side of the chamber whereupon the temperature was measured. Sadly due to a failure in the microcontroller
+                                        system for our experiment, we were unable to receive a significant amount of data.
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
