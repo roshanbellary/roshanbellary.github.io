@@ -1,5 +1,9 @@
 import {React, useState, useEffect} from 'react';
 import {Container, Row, Col, Card} from 'react-bootstrap';
+import Deca from './Resources/deca.png';
+import Assist from './Resources/vcassist.png';
+import Pitch from './Resources/pitch.png';
+import Web from './Resources/web.png';
 import './Business.css';
 import "aos/dist/aos.css";
 function Business(){
@@ -16,14 +20,14 @@ function Business(){
           };
     })
     const cardStyle1={
-        height:"350px",
+        height:"415px",
         backgroundColor:"black",
         borderColor:"#FFFFFF",
         borderWidth:"2px",
         overflowY:"auto"
     };
     const cardStyle2={
-        height:"100px",
+        height:"175px",
         backgroundColor:"black",
         borderColor:"#FFFFFF",
         borderWidth:"2px",
@@ -31,7 +35,7 @@ function Business(){
     };
     const textStyle={
         fontFamily:"Menlo",
-        color:"#29FE13"
+        color:"#29FE13",
     }
     return(
         <Container style={{height:height}}>
@@ -46,8 +50,32 @@ function Business(){
                             <Card.Title style={textStyle}>
                                 DECA
                             </Card.Title>
-                            <Card.Body style={textStyle}>
-
+                            <Card.Body style={{fontFamily:"Menlo", color:"#29FE13", textAlign:"left"}}>
+                                <Card.Img src={Deca} style={{height:"100px", width:"auto", marginLeft:"auto", marginRight:"auto", display:"block"}}/>
+                                <p style={{marginTop:"10px"}}>
+                                    I served as a Software and Operations officer for the VCHS DECA Chapter(180+ members) managing mock conferences and 
+                                    registration for DECA conferences along with working on VC DECA's website and app.
+                                </p>
+                                <Col style={{textAlign:"center"}}>
+                                    <b><u>DECA Awards</u></b>
+                                </Col>
+                                <Row style={{textAlign:"center"}}>
+                                    <Col style={{textAlign:"center"}}>
+                                        Top 10 Overall<br/>
+                                        PFL<br/>
+                                        @ SCDC 2021
+                                    </Col>
+                                    <Col style={{textAlign:"center"}}>
+                                        Top 10 Overall<br/>
+                                        PFL<br/>
+                                        @ SCDC 2022
+                                    </Col>
+                                    <Col style={{textAlign:"center"}}>
+                                        3rd Place Overall<br/>
+                                        PFL<br/>
+                                        @ SVCDC 2022
+                                    </Col>
+                                </Row>
                             </Card.Body>
                         </Card>
                     </div>
@@ -59,8 +87,30 @@ function Business(){
                             <Card.Title style={textStyle}>
                                 VC Assist
                             </Card.Title>  
-                            <Card.Body style={textStyle}>
-
+                            <Card.Body style={{fontFamily:"Menlo", color:"#29FE13", textAlign:"left"}}>
+                                <Card.Img src={Deca} style={{height:"100px", width:"auto", marginLeft:"auto", marginRight:"auto", display:"block"}}/>
+                                <p style={{marginTop:"10px"}}>
+                                    I work as a frontend developer at VC Assist, a startup at my school with 1000+ customers. 
+                                </p>
+                                <Row>
+                                    <p style={{textAlign:"center"}}>
+                                        <b><u>My Work</u></b>
+                                    </p>
+                                    <Row>
+                                        <Col style={{textAlign:"center"}}>
+                                            <Card.Img src={Pitch} style={{height:"40px", width:"auto", marginRight:"auto", marginLeft:"auto", display:"block"}}/>
+                                            Pitching to<br/>
+                                            Investors &<br/>
+                                            Donators
+                                        </Col>
+                                        <Col style={{textAlign:"center"}}>
+                                            <Card.Img src={Web} style={{height:"40px", width:"auto", marginRight:"auto", marginLeft:"auto", display:"block"}}/>
+                                            Developing<br/>
+                                            Website &<br/>
+                                            Portals
+                                        </Col>
+                                    </Row>
+                                </Row>
                             </Card.Body>
                         </Card>
                     </div>
@@ -73,8 +123,15 @@ function Business(){
                         <Card.Title style={textStyle}>
                             Management and Technology Summer Institute
                         </Card.Title>
-                        <Card.Body style={textStyle}>
-
+                        <Card.Body style={{textAlign:"left",fontFamily:"Menlo",color:"#29FE13"}}>
+                            At M&TSI, I learned both entrepreneurship and engineering culminating in
+                            a product that I created with my team called, TagBag. We won best overall 
+                            for our product and business plan. 
+                            <p style={{textAlign:"center"}}>
+                                <a href="https://devpost.com/software/tagbag" target="_blank" rel="noreferrer" style={textStyle}>
+                                    TagBag
+                                </a>
+                            </p>
                         </Card.Body>  
                     </Card>
                 </div>

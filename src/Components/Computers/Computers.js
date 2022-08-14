@@ -22,12 +22,15 @@ function Computer(){
           };
     })
     function AnalystOnClick(){
+        setShow([false,false,false]);
         setShow([true,false,false]);
     }
     function DeveloperOnClick(){
+        setShow([false,false,false]);
         setShow([false,true,false]);
     }
     function ProgrammerOnClick(){
+        setShow([false,false,false]);
         setShow([false,false,true]);
     }
     let cardStyles = [
