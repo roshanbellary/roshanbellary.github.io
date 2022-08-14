@@ -52,6 +52,11 @@ function Physics(){
                         Physics
                     </div>
                 </Row>
+                <Row>
+                    <div data-aos="fade-left" style={{fontSize:"12px", color:"#29FE13", fontFamily:"Menlo"}}>
+                        <b>Psssst...click on the Moon and the Earth</b>
+                    </div>
+                </Row>
                 <Row data-aos="fade-right" id="planet row" style={{marginTop:window.innerHeight/2-75-window.innerWidth*(0.2), padding:"0px"}}>
                     <div class="orbit" style={{width:window.innerWidth*(0.4), height:window.innerWidth*(0.4)}}>
                         <div class="moon" key={mKey} style={{marginLeft:window.innerWidth*(0.2)-moonWidth/2, borderWidth:moonBorderWidth.toString()+"px", borderColor:"#FFFFFF", borderStyle:"solid", transform:"translateY(-50%)"}} onMouseEnter={moonMouseEnter} onMouseLeave={moonMouseLeave} onClick={()=>setComp(true)}/>
