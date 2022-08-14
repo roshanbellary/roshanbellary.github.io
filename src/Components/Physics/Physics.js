@@ -85,12 +85,11 @@ function Physics(){
                                     </Card.Footer>
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setUsapho(false);}}>
-                                    <Card.Body style={{color:"#29FE13", textAlign:"center"}}>
-                                        I placed in the <b>top 100 students</b> in the nation in the USA Physics Olympiad attaining a <span style={{color:"#CD7F32"}}> Bronze</span> medal.
-                                        In addition, I've also participated in other physics competitions such as the Online Physics Olympiad and Physics Bowl.
-                                        At VCHS, I co-founded and served as an officer for the USAPHO club which teaches members concepts in competitive physics
-                                        and prepares them for physics competitions. As an officer, I helped develop handouts
-                                        which broke up difficult to understand physics concepts into bite-sized chunks.
+                                    <Card.Body style={{color:"#29FE13", textAlign:"left", textIndent:"20px"}}>
+                                        I attained a <span style={{color:"#CD7F32"}}> Bronze</span> medal in the USA Physics Olympiad placing in the <b>top 100 </b>
+                                        in the nation. I've also participated in other physics competitions such as OPHO and Physics Bowl.
+                                        At VCHS, I co-founded and serve as an officer for the USAPHO club which prepares members for physics competitions. 
+                                        As an officer, I develop handouts which broke up difficult to understand physics concepts into bite-sized chunks.
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
@@ -110,12 +109,12 @@ function Physics(){
                                     </Card.Footer>
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setCompet(false);}}>
-                                    <Card.Body style={{textAlign:"center"}}>
+                                    <Card.Body style={{textAlign:"left", textIndent:"20px"}}>
                                         To deepen my knowledge of physics, I've done a combination of online courses,
-                                        regular courses and read through physics books. I first studied physics through MIT's
-                                        online OCW courses where I've gone through everything from Mechanics up to E&M.
+                                        school courses and physics books. I first studied physics through MIT's
+                                        online OCW courses where I've gone through everything from Mechanics to E&M.
                                         At VCHS, I've taken Ap Physics C E&M and Mechanics and received a 5 on both AP tests. Finally, I've read physics
-                                        books such as Feynman's lectures, Resnick and Halliday, and my personal favorite <em>Introduction to Mechanics</em> by David Morin.
+                                        books such as Feynman's lectures, and my personal favorite <em>Introduction to Mechanics</em> by David Morin.
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
@@ -149,10 +148,10 @@ function Physics(){
                                     </Card.Footer>
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setFuel(false);}}>
-                                    <Card.Body style={{textAlign:"center", overflowY:"auto"}}>
+                                    <Card.Body style={{textAlign:"left", overflowY:"auto", textIndent:"20px"}}>
                                         I led the development and research of an experiment which studied the efficacy of
-                                        a biofilm microbial fuel cell in microgravity. Using a S. Oneidensis(an electroactive bacteria) biofilm on the anodic side of the cell, 
-                                        we constructed and sent a fully functioning microgravity microbial fuel cell up 
+                                        a biofilm microbial fuel cell in microgravity. 
+                                        We constructed and sent a fully functioning microgravity microbial fuel cell up 
                                         to the International Space Station to test its voltage production over time.
                                         We are currently in the middle of publishing our research paper detailing our results.
                                     </Card.Body>
@@ -174,11 +173,10 @@ function Physics(){
                                     </Card.Footer>
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setFerro(false);}}>
-                                    <Card.Body style={{textAlign:"center", overflowY:"auto"}}>
-                                        I worked as the deputy lead of a team which studied the efficacy of using
+                                    <Card.Body style={{textAlign:"left", overflowY:"auto", textIndent:"20px"}}>
+                                        I was the deputy lead of a team which studied the efficacy of using
                                         ferrofluid as a method of energy transfer in microgravity. 
-                                        We developed and sent a chamber to the ISS which heated ferrofluid on one end and used electromagnets to propel the fluid
-                                        to the other side of the chamber whereupon the temperature was measured. Sadly due to a failure in the microcontroller
+                                        We developed and sent a testing chamber to the ISS; sadly however, due to a failure in the microcontroller
                                         system for our experiment, we were unable to receive a significant amount of data.
                                     </Card.Body>
                                 </Card>

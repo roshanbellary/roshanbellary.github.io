@@ -1,7 +1,7 @@
 import {React, useState, useEffect} from 'react';
 import {Container, Row, Col, Card} from 'react-bootstrap';
 import Deca from './Resources/deca.png';
-import Assist from './Resources/vcassist.png';
+import Education from './Resources/education.png';
 import Pitch from './Resources/pitch.png';
 import Web from './Resources/web.png';
 import './Business.css';
@@ -42,7 +42,7 @@ function Business(){
             <div class="header-text" data-aos="fade-right">
                 Business/Entrepreneurship
             </div>
-            <Row style={{marginTop:"100px"}}>
+            <Row style={{marginTop:"20px"}}>
                 <Col>
                     <div data-aos="fade-right">
                         <Card style={cardStyle1}>
@@ -88,7 +88,7 @@ function Business(){
                                 VC Assist
                             </Card.Title>  
                             <Card.Body style={{fontFamily:"Menlo", color:"#29FE13", textAlign:"left"}}>
-                                <Card.Img src={Deca} style={{height:"100px", width:"auto", marginLeft:"auto", marginRight:"auto", display:"block"}}/>
+                                <Card.Img src={Education} style={{height:"100px", width:"auto", marginLeft:"auto", marginRight:"auto", display:"block"}}/>
                                 <p style={{marginTop:"10px"}}>
                                     I work as a frontend developer at VC Assist, a startup at my school with 1000+ customers. 
                                 </p>

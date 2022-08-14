@@ -74,7 +74,7 @@ function Computer(){
                 Computer Science
             </div>
             <Col>
-                <Row style={{height:"100px", marginTop:"100px"}}>
+                <Row style={{height:"100px", marginTop:"20px"}}>
                     <Col>
                         <div data-aos="fade-right">
                             <Card style={cardStyles[0]} onMouseEnter={() => setCardBgColor(poss[0])} onMouseLeave={()=> setCardBgColor(poss[3])} onClick={AnalystOnClick}>
@@ -124,11 +124,11 @@ function Computer(){
                                         </div>
                                     </Card.Title>
                                     <Card.Body style={{fontFamily:"Menlo", color:"#29FE13", textAlign:"left"}}>
-                                            With my knowledge of R and Python, my team and I conducted a data analysis project on the Ukraine-Russia conflict studying
+                                            With my experience in R and Python, my team and I conducted a data analysis project on the Ukraine-Russia conflict studying
                                         global sentiment surrounding the war using natural language processing, sentiment analysis and tweet geolocation data to classify a dataset of 5000 tweets in the earlier
                                         days of the conflict among 5 different emotions. We wrote a research paper and a poster
-                                        detailing the results of our research which we sent to the American Statistical Association Poster Competition.
-                                        In addition to the data analysis research I have done, I have also taken AP Statistics and Advanced Data Analysis at VCHS,
+                                        detailing the results which we sent to the American Statistical Association Poster Competition.
+                                        In addition to the data analysis research, I have also taken AP Statistics and Advanced Data Analysis at VCHS,
                                         the former of which I received a 5 in.
                                         <Row style={{marginTop:"10px"}}>
                                             <Col style={{textAlign:"center", color:"#29FE13"}}>
@@ -161,12 +161,11 @@ function Computer(){
                                         </div>
                                     </Card.Title>
                                     <Card.Body style={{fontFamily:"Menlo", color:"#29FE13", textAlign:"left"}}>
-                                        Utilizing my knowledge of the programming languages: Javascript and ReactJS and
-                                        my experience with HTML and CSS, I've worked on the frontend component
-                                        of sites for 2 organizations, VC DECA and VC Assist. For VC DECA, I developed
-                                        a scheduling feature doing both frontend and backend which handled reminding members about the important meetings of
-                                        the organization and tracked attendance of members for the organization. For VC Assist,
-                                        I worked with a team to develop the frontend of its marketing website. In addition, I also developed this site!
+                                        Utilizing my knowledge of Javascript and ReactJS and
+                                        my experience with HTML and CSS, I've worked on sites for 2 organizations, VC DECA and VC Assist. For VC DECA, I developed
+                                        a scheduling feature which handled reminding members about important meetings and 
+                                        tracked attendance of members. For VC Assist,
+                                        I worked with a team to develop its marketing website. In addition, I also developed this site!
                                         <Row style={{marginTop:"10px"}}>
                                             <Col style={{textAlign:"center"}}>
                                                 <b>Sites I worked on:</b>
@@ -201,12 +200,11 @@ function Computer(){
                                         </div>
                                     </Card.Title>
                                     <Card.Body style={{fontFamily:"Menlo", color:"#29FE13", textAlign:"left"}}>
-                                        Through reading books on algorithms such as Darren Yao's books on Competitive Programming
-                                        and extensive practice on sites such as Codeforces and Atcoder, I've attained 
+                                        Through reading books on algorithms and extensive practice with algorithmic problems, I've attained 
                                         <span style={{color:"gold"}}> Gold</span> ranking in the USA Computing Olympiad, Specialist ranking on Codeforces,
                                         and 5 kyu on Atcoder. At VCHS, I serve as the president of the Competitive Programming Club
                                         where my officers and I teach members important concepts in CS and the world of algorithms
-                                        to prepare them for contests like USACO and ACSL(American Computer Science League).
+                                        to prepare them for contests like USACO and ACSL.
                                         <Row style={{marginTop:"10px"}}>
                                             <Col style={{textAlign:"center", color:"#29FE13"}}>
                                                 <a href="https://codeforces.com/profile/robell" rel="noreferrer" target="_blank" style={{textAlign:"center", color:"#29FE13"}}>
