@@ -6,3 +6,6 @@
     width: 28px;
     align-items: center;
 }
+*{
+    font-family: 'Courier' !important;
+}
