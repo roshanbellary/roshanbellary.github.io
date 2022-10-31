@@ -1,6 +1,7 @@
 import {React,useState, useEffect} from 'react';
 import {Container, Row, Col, Card} from 'react-bootstrap';
 import Roshan from './Resources/roshan.png';
+import Resumes from './Resources/Roshan_Bellary_Resume.pdf';
 function Resume(){
     const [width, setWidth] = useState(window.innerWidth);
     const [height, setHeight] = useState(window.innerHeight);
@@ -17,7 +18,9 @@ function Resume(){
     return (
         <Container style={{height:height}}>
             <div class="header-text" data-aos="fade-right">
-                Resume
+                <a href={Resumes} target="_blank" style={{color:"#29FE13"}}>
+                    Resume
+                </a>
             </div>
             <Row>
                 <Col>
