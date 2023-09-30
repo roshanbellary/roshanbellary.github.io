@@ -1,5 +1,6 @@
 import {React,useEffect, useState} from 'react';
 import {Container, Row, Col, Modal, Card} from 'react-bootstrap';
+import Poster from './Resources/poster.pdf';
 import Typewriter from "typewriter-effect";
 import ReactCardFlip from 'react-card-flip';
 import physics from './Resources/physics.png';
@@ -91,10 +92,26 @@ function Physics(){
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setUsapho(false);}}>
                                     <Card.Body style={{color:"#29FE13", textAlign:"left", textIndent:"20px"}}>
-                                        I attained a <span style={{color:"#CD7F32"}}> Bronze</span> medal in the USA Physics Olympiad placing in the <b>top 100 </b>
-                                        in the nation. I've also participated in other physics competitions such as OPHO and Physics Bowl.
-                                        At VCHS, I co-founded and serve as an officer for the USAPHO club which prepares members for physics competitions. 
-                                        As an officer, I develop handouts which broke up difficult to understand physics concepts into bite-sized chunks.
+                                        <ul id="list-style">
+                                            <li>Attained a <span style={{color:"#CD7F32"}}> Bronze</span> medal in the USA Physics Olympiad. Scored in top 100 in the nation
+                                            </li>
+                                            <li>
+                                                Have participated in...
+                                                <ul>
+                                                    <li>USAPHO</li>
+                                                    <li>F=MA</li>
+                                                    <li>Opho</li>
+                                                    <li>Physics Bowl</li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                Cofounded and served as an officer for the USAPHO Club
+                                                <ul>
+                                                    <li>Prepared members for physics competitions</li>
+                                                    <li>Worked on creating handouts which introduce hard physics concepts to members</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
@@ -115,11 +132,33 @@ function Physics(){
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setCompet(false);}}>
                                     <Card.Body style={{textAlign:"left", textIndent:"20px"}}>
-                                        To deepen my knowledge of physics, I've done a combination of online courses,
-                                        school courses and physics books. I first studied physics through MIT's
-                                        online OCW courses where I've gone through everything from Mechanics to E&M.
-                                        At VCHS, I've taken Ap Physics C E&M and Mechanics and received a 5 on both AP tests. Finally, I've read physics
-                                        books such as Feynman's lectures, and my personal favorite <em>Introduction to Mechanics</em> by David Morin.
+                                        <ul id="list-style">
+                                            <li>
+                                                Taken multiple online physics courses including:
+                                                <ul>
+                                                    <li>
+                                                        Mechanics: Kinematics, Dynamics and Harmonic from MITx
+                                                    </li>
+                                                    <li>
+                                                        Electricity and Magnetism from MITx
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                Achieved 5s in both AP Physics C Mechanics and AP Physics C E&M
+                                            </li>
+                                            <li>
+                                                Read physics books such as:
+                                                <ul>
+                                                    <li>
+                                                        <i>Introduction to Mechanics</i> by David Morin
+                                                    </li>
+                                                    <li>
+                                                        <i>Feynman's Lectures</i> by Richard Feynman
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
@@ -154,11 +193,28 @@ function Physics(){
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setFuel(false);}}>
                                     <Card.Body style={{textAlign:"left", overflowY:"auto", textIndent:"20px"}}>
-                                        I led the development and research of an experiment which studied the efficacy of
-                                        a biofilm microbial fuel cell in microgravity. 
-                                        We constructed and sent a fully functioning microgravity microbial fuel cell up 
-                                        to the International Space Station to test its voltage production over time.
-                                        We are currently in the middle of publishing our research paper detailing our results.
+                                        <ul>
+                                            <li>
+                                                Led a team of 8 to develop experiment which studied the efficacy of a biofilm microbial fuel cell(BMFC)
+                                                in microgravity
+                                            </li>
+                                            <li>
+                                                Constructred and sent the BMFC to the International Space Station to test its voltage production over time
+                                            </li>
+                                            <li>
+                                                Presented results in a Research Poster at the American Society for Gravitational and Space Research(ASGSR) Conference
+                                            </li>
+                                            <li>
+                                                Attained 1st Place in the high school division at ASGSR
+                                            </li>
+                                            <li>
+                                                <b>
+                                                    <a href={Poster} target="_blank" style={{color:"#29FE13"}}>
+                                                        Research Poster
+                                                    </a>
+                                                </b>
+                                            </li>
+                                        </ul>
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>
@@ -168,7 +224,7 @@ function Physics(){
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseEnter={()=>{setFerro(true);setFuel(false);}}>
                                     <Card.Header/>
                                     <Card.Title style={{textAlign:"center"}}>
-                                        <b>Ferrofluid Energy Transfer</b>
+                                        <b>Astronomy Research</b>
                                     </Card.Title>
                                     <Card.Body>
                                         <Card.Img src={physics} className="image-card"/>
@@ -179,10 +235,38 @@ function Physics(){
                                 </Card>
                                 <Card style={{backgroundColor:"black", borderWidth:"2px", border:"solid", height:"450px", overflowY:"auto"}} onMouseLeave={()=>{setFerro(false);}}>
                                     <Card.Body style={{textAlign:"left", overflowY:"auto", textIndent:"20px"}}>
-                                        I was the deputy lead of a team which studied the efficacy of using
-                                        ferrofluid as a method of energy transfer in microgravity. 
-                                        We developed and sent a testing chamber to the ISS; sadly however, due to a failure in the microcontroller
-                                        system for our experiment, we were unable to receive a significant amount of data.
+                                        <ul>
+                                            <li>
+                                                <b>Astrometric Observations of Double Stars</b>
+                                                <ul>
+                                                    <li>
+                                                        Analyzed 4 double star systems 
+                                                    </li>
+                                                    <li>
+                                                        Estimated star masses, PA, SEP, and proper motions to determine if the systems were gravitationally bound
+                                                    </li>
+                                                    <li>
+                                                        <b>
+                                                            <a href="http://www.jdso.org/volume19/number2/Angeles_189_198.pdf" style={{color:"#29FE13"}}>
+                                                                Published Research Paper
+                                                            </a>
+                                                        </b>    
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <b>Investigation of an Eclipsing Binary</b>
+                                                <ul>
+                                                    <li>Formulated Light Curves and Calculated Period for Eclipsing Binary ASAS J134708-6350.3</li>
+                                                    <li>
+                                                        Research Paper: Coming Soon
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <b>More to Come :)</b>
+                                            </li>
+                                        </ul>
                                     </Card.Body>
                                 </Card>
                             </ReactCardFlip>

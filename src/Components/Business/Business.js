@@ -71,9 +71,9 @@ function Business(){
                                         @ SCDC 2022
                                     </Col>
                                     <Col style={{textAlign:"center"}}>
-                                        3rd Place Overall<br/>
+                                        2nd Place Overall<br/>
                                         PFL<br/>
-                                        @ SVCDC 2022
+                                        @ SCDC 2022
                                     </Col>
                                 </Row>
                             </Card.Body>

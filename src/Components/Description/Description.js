@@ -73,15 +73,10 @@ function Description(){
                 </p>
             </div>
             <div data-aos="fade-left" className="set-font" style={{marginTop:"100px"}}>
-                <Typewriter
-                options={{
-                    strings: ["I\'m a rising senior at Valley Christian High School interested in....","CS, Business and Physics"],
-                    autoStart: true,
-                    loop: true,
-                    delay: 30,
-                    deleteSpeed: 30
-                  }}
-                />
+                Freshman in the University of Pennsylvania M&T Program
+            </div>
+            <div data-aos="fade-left" className="set-font" >
+                Interested in....CS, Business and Physics
             </div>
         </Container>
     )

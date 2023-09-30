@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-
+let alphabet = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*";
+let length = alphabet.length;
 function MatrixBackground({ timeout = 100 }) {
     const canvas = useRef();
     const [widthS, setWidth] = useState(window.innerWidth);
@@ -35,7 +36,7 @@ function MatrixBackground({ timeout = 100 }) {
             context.font = '15pt monospace';
 
             yPositions.forEach((y, index) => {
-                const text = String.fromCharCode(Math.random() * 128);
+                const text = alphabet[Math.floor(Math.random()*length)];
                 const x = index * 20;
                 context.fillText(text, x, y);
 
