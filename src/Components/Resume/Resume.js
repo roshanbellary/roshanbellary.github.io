@@ -18,9 +18,7 @@ function Resume(){
     return (
         <Container style={{height:height}}>
             <div class="header-text" data-aos="fade-right">
-                <a href={Resumes} target="_blank" style={{color:"#29FE13"}}>
-                    Resume
-                </a>
+                Resume
             </div>
             <Row>
                 <Col>
