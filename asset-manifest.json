@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1198da1a.css",
-    "main.js": "/static/js/main.94151165.js",
+    "main.js": "/static/js/main.5c61cb52.js",
     "static/media/roshan.png": "/static/media/roshan.3407fa2adb3a02d00bf1.png",
     "static/media/Research_Paper.pdf": "/static/media/Research_Paper.5e3bc7c3315076c8b296.pdf",
     "static/media/poster.png": "/static/media/poster.ca2284b4ac129e35761b.png",
@@ -15,10 +15,10 @@
     "static/media/deca.png": "/static/media/deca.2306911a575fd5c31dd8.png",
     "index.html": "/index.html",
     "main.1198da1a.css.map": "/static/css/main.1198da1a.css.map",
-    "main.94151165.js.map": "/static/js/main.94151165.js.map"
+    "main.5c61cb52.js.map": "/static/js/main.5c61cb52.js.map"
   },
   "entrypoints": [
     "static/css/main.1198da1a.css",
-    "static/js/main.94151165.js"
+    "static/js/main.5c61cb52.js"
   ]
 }
