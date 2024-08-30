@@ -34,8 +34,7 @@ function Resume(){
                                 <b>Bio</b>
                             </Card.Title>
                             <Card.Body style={{textAlign:"left", fontSize:"12px"}}>
-                                Roshan Bellary is a web/app developer and entrepreneur currently in his
-                                senior year at Valley Christian High School. He has a passion for algorithmic
+                                Roshan Bellary is a web/app developer and entrepreneur currently studying at the University of Pennsylvania M&T Program. He has a passion for algorithmic
                                 creation stemming from his competitive programming experience which he wants
                                 to explore in both business and physics applications. His favorite hobbies
                                 include 3d printing, board games, drinking copious amounts of coffee and

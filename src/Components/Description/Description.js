@@ -73,7 +73,7 @@ function Description(){
                 </p>
             </div>
             <div data-aos="fade-left" className="set-font" style={{marginTop:"100px"}}>
-                Freshman in the University of Pennsylvania M&T Program
+                Student in the University of Pennsylvania M&T Program
             </div>
             <div data-aos="fade-left" className="set-font" >
                 Interested in....CS, Business and Physics
