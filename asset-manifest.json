@@ -1,13 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.1198da1a.css",
-    "main.js": "/static/js/main.a2beac92.js",
+    "main.js": "/static/js/main.5f138436.js",
     "static/media/roshan.png": "/static/media/roshan.3407fa2adb3a02d00bf1.png",
     "static/media/Research_Paper.pdf": "/static/media/Research_Paper.5e3bc7c3315076c8b296.pdf",
     "static/media/poster.png": "/static/media/poster.ca2284b4ac129e35761b.png",
     "static/media/poster.pdf": "/static/media/poster.66296b40ac85a93f448e.pdf",
     "static/media/usaco.png": "/static/media/usaco.0ddb0a7fb58f7e5244a2.png",
-    "static/media/Roshan_Bellary_Resume.pdf": "/static/media/Roshan_Bellary_Resume.c1d52403ff1dbd063106.pdf",
     "static/media/instagram.png": "/static/media/instagram.0d25fe8234e532a9b229.png",
     "static/media/pitch.png": "/static/media/pitch.ed0ab74df5d583441971.png",
     "static/media/physics.png": "/static/media/physics.19e8037a5f3bbe241dea.png",
@@ -15,10 +14,10 @@
     "static/media/deca.png": "/static/media/deca.2306911a575fd5c31dd8.png",
     "index.html": "/index.html",
     "main.1198da1a.css.map": "/static/css/main.1198da1a.css.map",
-    "main.a2beac92.js.map": "/static/js/main.a2beac92.js.map"
+    "main.5f138436.js.map": "/static/js/main.5f138436.js.map"
   },
   "entrypoints": [
     "static/css/main.1198da1a.css",
-    "static/js/main.a2beac92.js"
+    "static/js/main.5f138436.js"
   ]
 }
