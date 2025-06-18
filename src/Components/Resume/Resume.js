@@ -1,7 +1,6 @@
 import {React,useState, useEffect} from 'react';
 import {Container, Row, Col, Card} from 'react-bootstrap';
 import Roshan from './Resources/roshan.png';
-import Resumes from './Resources/Roshan_Bellary_Resume.pdf';
 function Resume(){
     const [width, setWidth] = useState(window.innerWidth);
     const [height, setHeight] = useState(window.innerHeight);
