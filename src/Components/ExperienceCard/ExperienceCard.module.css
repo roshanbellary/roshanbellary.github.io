@@ -1,0 +1,82 @@
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(8px);
+  transition: border-color var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.card:hover {
+  border-color: var(--color-accent-dim);
+  box-shadow: 0 0 20px var(--color-accent-glow);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.role {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-accent);
+  margin: 0;
+}
+
+.dates {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.company {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+.bullets li {
+  position: relative;
+  padding-left: 1.25rem;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.bullets li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  color: var(--color-accent-dim);
+  background: rgba(0, 255, 65, 0.05);
+}

@@ -1,0 +1,162 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.heroText {
+  flex: 1;
+}
+
+.greeting {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--color-accent-dim);
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  color: var(--color-text);
+  line-height: 1.7;
+  max-width: 600px;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid var(--color-accent-dim);
+  box-shadow: 0 0 30px var(--color-accent-glow);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.section {
+  margin-bottom: 3rem;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.education {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eduItem {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 1.25rem;
+  background: rgba(13, 26, 13, 0.6);
+}
+
+.eduSchool {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-accent);
+  margin-bottom: 0.25rem;
+}
+
+.eduDetails {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.awards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.awardItem {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.awardItem::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+.skillsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.skillCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skillLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.skillTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .name {
+    font-size: 2rem;
+  }
+
+  .headshot {
+    width: 150px;
+    height: 150px;
+  }
+
+  .bio {
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 2rem 1.25rem;
+  }
+}
