@@ -12,6 +12,7 @@ function Layout({ children }) {
         zIndex: 1,
         minHeight: 'calc(100vh - var(--nav-height))',
         paddingTop: 'var(--nav-height)',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
       }}>
         {children}
       </main>
