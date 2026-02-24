@@ -1,32 +1,27 @@
+import { HashRouter, Routes, Route } from 'react-router-dom';
+import Layout from '../Components/Layout/Layout';
+import Home from '../pages/Home/Home';
+import Experience from '../pages/Experience/Experience';
+import Projects from '../pages/Projects/Projects';
+import BlogIndex from '../pages/Blog/BlogIndex';
+import BlogPost from '../pages/Blog/BlogPost';
+import Contact from '../pages/Contact/Contact';
 import './App.css';
-import Description from '../Components/Description/Description';
-import Business from '../Components/Business/Business';
-import Physics from '../Components/Physics/Physics';
-import Computer from '../Components/Computers/Computers';
-import Navigation from '../Components/Navigation/Navigation';
-import Resume from '../Components/Resume/Resume';
-import {React, useEffect} from 'react';
-import AOS from "aos";
-import "aos/dist/aos.css";
-import MatrixBackground from '../Components/MatrixBackground/Matrix.js';
-function App(){
-  useEffect(() => {
-    AOS.init();
-    AOS.init({
-      mirror:true,
-      once: false,
-    })
-  }, []);
-  return(
-    <div className="App">
-      <MatrixBackground/>
-      <Navigation/>
-      <Description/>
-      <Computer/>
-      <Business/>
-      <Physics/>
-      <Resume/>
-    </div>
+
+function App() {
+  return (
+    <HashRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/blog" element={<BlogIndex />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
+    </HashRouter>
   );
 }
 
