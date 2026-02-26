@@ -5,12 +5,14 @@
   min-height: 60vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .subtitle {
@@ -18,55 +20,168 @@
   font-size: 0.9rem;
   color: var(--color-text-secondary);
   margin-bottom: 3rem;
+  text-align: center;
 }
 
-.links {
+/* ── Orbit system ── */
+
+.orbitContainer {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  --orbit-radius: 140px;
+}
+
+.orbitRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--orbit-radius) * 2);
+  height: calc(var(--orbit-radius) * 2);
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 255, 65, 0.15);
+  border-radius: 50%;
+  box-shadow:
+    0 0 20px rgba(0, 255, 65, 0.04),
+    inset 0 0 20px rgba(0, 255, 65, 0.04);
+}
+
+/* ── Center planet (GitHub) ── */
+
+.centerPlanet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  max-width: 500px;
-}
-
-.contactLink {
-  display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 1.25rem;
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  background: rgba(13, 26, 13, 0.6);
+  gap: 0.5rem;
   text-decoration: none;
-  color: var(--color-text);
-  transition: border-color var(--transition-normal), box-shadow var(--transition-normal), transform var(--transition-normal);
+  z-index: 2;
+  transition: transform 0.3s ease;
 }
 
-.contactLink:hover {
-  border-color: var(--color-accent-dim);
-  box-shadow: 0 0 20px var(--color-accent-glow);
-  transform: translateX(4px);
-  color: var(--color-text);
+.centerPlanet:hover {
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
-.contactIcon {
-  width: 24px;
-  height: 24px;
-  filter: brightness(0.7);
+.centerGlow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 255, 65, 0.12) 0%, transparent 70%);
+  animation: pulse 3s ease-in-out infinite;
+  pointer-events: none;
 }
 
-.contactLink:hover .contactIcon {
-  filter: brightness(1) drop-shadow(0 0 4px var(--color-accent));
+.centerIcon {
+  width: 56px;
+  height: 56px;
+  filter: brightness(1) drop-shadow(0 0 12px rgba(0, 255, 65, 0.4));
+  position: relative;
+  z-index: 1;
 }
 
-.contactLabel {
-  font-family: var(--font-heading);
+.centerPlanet:hover .centerIcon {
+  filter: brightness(1.2) drop-shadow(0 0 24px rgba(0, 255, 65, 0.7));
+}
+
+.centerLabel {
+  font-family: var(--font-mono);
   font-size: 0.85rem;
+  color: var(--color-accent);
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Orbiting items ── */
+
+.orbitWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  animation: orbit 20s linear infinite;
+}
+
+.orbitItem {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  padding: 0.65rem;
+  border-radius: 12px;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.orbitItem:hover {
+  background: rgba(0, 255, 65, 0.08);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.12);
+}
+
+.orbitIcon {
+  width: 36px;
+  height: 36px;
+  filter: brightness(0.8);
+  transition: filter 0.3s ease;
+}
+
+.orbitItem:hover .orbitIcon {
+  filter: brightness(1) drop-shadow(0 0 8px rgba(0, 255, 65, 0.5));
+}
+
+.orbitLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.orbitItem:hover .orbitLabel {
   color: var(--color-accent);
 }
 
-.contactValue {
-  font-size: 0.9rem;
-  color: var(--color-text-secondary);
+/* Pause orbit on hover so items are easy to click */
+.orbitContainer:hover .orbitWrapper {
+  animation-play-state: paused;
 }
+
+/* ── Keyframes ── */
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg) translateX(var(--orbit-radius)) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(var(--orbit-radius)) rotate(-360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translate(-50%, -60%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -60%) scale(1.25);
+  }
+}
+
+/* ── Responsive ── */
 
 @media (max-width: 768px) {
   .container {
@@ -75,5 +190,26 @@
 
   .title {
     font-size: 1.5rem;
+  }
+
+  .orbitContainer {
+    width: 300px;
+    height: 300px;
+    --orbit-radius: 110px;
+  }
+
+  .centerIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .centerGlow {
+    width: 70px;
+    height: 70px;
+  }
+
+  .orbitIcon {
+    width: 28px;
+    height: 28px;
   }
 }

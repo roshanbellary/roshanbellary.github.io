@@ -3,7 +3,7 @@ import linkedinIcon from '../../assets/icons/linkedin.png';
 import emailIcon from '../../assets/icons/email.png';
 import styles from './Contact.module.css';
 
-const contacts = [
+const orbitingContacts = [
   {
     label: 'Email',
     value: 'rbellary@wharton.upenn.edu',
@@ -16,34 +16,58 @@ const contacts = [
     href: 'https://www.linkedin.com/in/roshanbellary/',
     icon: linkedinIcon,
   },
-  {
-    label: 'GitHub',
-    value: 'github.com/roshanbellary',
-    href: 'https://github.com/roshanbellary',
-    icon: githubIcon,
-  },
 ];
+
+const centerContact = {
+  label: 'GitHub',
+  value: 'github.com/roshanbellary',
+  href: 'https://github.com/roshanbellary',
+  icon: githubIcon,
+};
 
 function Contact() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>{'// Contact'}</h1>
       <p className={styles.subtitle}>Get in touch</p>
-      <div className={styles.links}>
-        {contacts.map(({ label, value, href, icon }) => (
-          <a
-            key={label}
-            href={href}
-            target={href.startsWith('mailto') ? undefined : '_blank'}
-            rel="noreferrer"
-            className={styles.contactLink}
+      <div className={styles.orbitContainer}>
+        <div className={styles.orbitRing} />
+        <a
+          href={centerContact.href}
+          target="_blank"
+          rel="noreferrer"
+          className={styles.centerPlanet}
+        >
+          <div className={styles.centerGlow} />
+          <img
+            src={centerContact.icon}
+            alt={centerContact.label}
+            className={styles.centerIcon}
+          />
+          <span className={styles.centerLabel}>{centerContact.label}</span>
+        </a>
+        {orbitingContacts.map((contact, index) => (
+          <div
+            key={contact.label}
+            className={styles.orbitWrapper}
+            style={{
+              animationDelay: `${-index * (20 / orbitingContacts.length)}s`,
+            }}
           >
-            <img src={icon} alt={label} className={styles.contactIcon} />
-            <div>
-              <div className={styles.contactLabel}>{label}</div>
-              <div className={styles.contactValue}>{value}</div>
-            </div>
-          </a>
+            <a
+              href={contact.href}
+              target={contact.href.startsWith('mailto') ? undefined : '_blank'}
+              rel="noreferrer"
+              className={styles.orbitItem}
+            >
+              <img
+                src={contact.icon}
+                alt={contact.label}
+                className={styles.orbitIcon}
+              />
+              <span className={styles.orbitLabel}>{contact.label}</span>
+            </a>
+          </div>
         ))}
       </div>
     </div>
