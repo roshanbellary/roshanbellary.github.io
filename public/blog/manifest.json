@@ -1,9 +1,9 @@
 [
   {
-    "slug": "hello-world",
-    "title": "Hello World",
-    "date": "2026-02-24",
-    "tags": ["meta"],
-    "description": "First post on the new site. Testing markdown and LaTeX rendering."
+    "slug": "gpt-for-chess",
+    "title": "GptForChess: A Transformer-Based Chess Engine",
+    "date": "2026-05-16",
+    "tags": ["machine-learning", "transformers", "chess"],
+    "description": "A multi-experiment investigation into building a competitive chess engine using transformer architectures — from reward-driven minimax to cross-attention policy networks."
   }
 ]

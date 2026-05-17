@@ -1,0 +1,9 @@
+[
+  {
+    "slug": "hello-world",
+    "title": "Hello World",
+    "date": "2026-02-24",
+    "tags": ["meta"],
+    "description": "First post on the new site. Testing markdown and LaTeX rendering."
+  }
+]
