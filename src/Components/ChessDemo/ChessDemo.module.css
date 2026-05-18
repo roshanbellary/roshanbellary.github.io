@@ -1,0 +1,108 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  background: rgba(0, 255, 65, 0.04);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--color-text);
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 8px var(--color-accent);
+  flex-shrink: 0;
+}
+
+.idle .dot { background: var(--color-accent-dim); box-shadow: 0 0 6px rgba(0,255,65,0.4); }
+.thinking .dot {
+  animation: pulse 900ms ease-in-out infinite;
+}
+.win { color: var(--color-accent); }
+.lose { color: #ff7777; }
+.lose .dot { background: #ff7777; box-shadow: 0 0 6px #ff7777; }
+.draw { color: var(--color-text-secondary); }
+.draw .dot { background: var(--color-text-secondary); box-shadow: none; }
+.check { color: #ffcc44; }
+.check .dot { background: #ffcc44; box-shadow: 0 0 6px #ffcc44; }
+.error { color: #ff4444; }
+.error .dot { background: #ff4444; box-shadow: 0 0 6px #ff4444; }
+
+.retryBtn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid #ff4444;
+  color: #ff4444;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.retryBtn:hover {
+  background: rgba(255, 68, 68, 0.12);
+}
+
+.boardWrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.controls {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.controlBtn {
+  flex: 1 1 auto;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+}
+
+.controlBtn:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(0, 255, 65, 0.05);
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+}
+
+.endpoint {
+  opacity: 0.75;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.8); }
+}

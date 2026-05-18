@@ -5,7 +5,7 @@ tags: ["machine-learning", "transformers", "chess"]
 description: "Six experiments, four architectures, and one stubborn question: how far can a purely-supervised transformer go on chess? Notes from a project that ended at 73% top-1 and 55% puzzle solves."
 ---
 
-I spent the last month trying to answer a question I couldn't stop thinking about: a chess game is a sequence of tokens drawn from a small vocabulary, and language models seem to do fine with that, so how far can you push a pure transformer, with no search and no self-play, on chess?
+I spent the last month trying to answer a question: a chess game is a sequence of tokens drawn from a small vocabulary, and language models seem to do fine with that, so how far can you push a pure transformer, with no self-play, on chess?
 
 The final answer ended up better than I expected. The headline numbers: **73.1% test top-1 accuracy** on Lichess game continuations, **92.6% top-5**, and **55.08% puzzle first-move solve rate** on held-out Lichess puzzles. ~24 hours of training on a rented RTX PRO 6000 Blackwell. Total cost: ~$24.
 

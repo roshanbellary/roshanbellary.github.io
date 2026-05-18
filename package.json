@@ -4,9 +4,11 @@
   "private": true,
   "homepage": "https://roshanbellary.github.io",
   "dependencies": {
+    "chess.js": "^1.4.0",
     "date-fns": "^3.6.0",
     "katex": "^0.16.9",
     "react": "^18.2.0",
+    "react-chessboard": "^4.7.3",
     "react-dom": "^18.2.0",
     "react-markdown": "^9.0.1",
     "react-router-dom": "^6.21.0",
@@ -19,7 +21,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d build -t",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

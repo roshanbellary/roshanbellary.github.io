@@ -9,6 +9,9 @@ import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { format, parseISO } from 'date-fns';
 import 'katex/dist/katex.min.css';
 import styles from './BlogPost.module.css';
+import Modal from '../../Components/Modal/Modal';
+import DemoButton from '../../Components/DemoButton/DemoButton';
+import ChessDemo from '../../Components/ChessDemo/ChessDemo';
 
 function parseFrontmatter(text) {
   const match = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
@@ -35,6 +38,7 @@ function BlogPost() {
   const [post, setPost] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [demoOpen, setDemoOpen] = useState(false);
 
   useEffect(() => {
     fetch(`${process.env.PUBLIC_URL}/blog/posts/${slug}.md`)
@@ -67,8 +71,10 @@ function BlogPost() {
   );
 
   const { frontmatter, content } = post;
+  const hasDemo = slug === 'gpt-for-chess';
 
   return (
+    <>
     <div className={styles.container}>
       <Link to="/blog" className={styles.backLink}>{'<'}- back to blog</Link>
 
@@ -129,6 +135,19 @@ function BlogPost() {
         </ReactMarkdown>
       </div>
     </div>
+    {hasDemo && (
+      <>
+        <DemoButton onClick={() => setDemoOpen(true)} />
+        <Modal
+          isOpen={demoOpen}
+          onClose={() => setDemoOpen(false)}
+          title="GptForChess Live Demo"
+        >
+          <ChessDemo />
+        </Modal>
+      </>
+    )}
+    </>
   );
 }
 
