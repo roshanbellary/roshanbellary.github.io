@@ -17,7 +17,7 @@ Repo: <https://github.com/roshanbellary/GptForChess>
 
 ## The setup
 
-The constraint I held the whole way through: **only supervised learning**. No RL, no self-play, no MCTS at inference time. The training signals were:
+The constraint I held the whole way through: **only supervised learning**. No RL and no self-play at inference time. The training signals were:
 
 - **Lichess games** from the open database, filtered to both players Elo ≥ 1800 with normal terminations (~1M games for policy, ~1M for reward — disjoint subsets).
 - **Stockfish evaluations** on positions sampled from those games, normalized as `tanh(centipawns / 400)` — ~10M labeled positions for the reward model.
