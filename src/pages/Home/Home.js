@@ -17,7 +17,7 @@ function Home() {
             I'm a student in the Jerome Fisher M&T Program at the University of Pennsylvania,
             pursuing an accelerated M.S.E & B.S.E in Computer Science (AI concentration) and
             a B.S. in Economics (Finance concentration). I'm passionate about building
-            high-performance systems at the intersection of software engineering and quantitative finance.
+            high-performance systems and making AI inference faster 
           </p>
         </div>
         <img

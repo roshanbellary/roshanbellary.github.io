@@ -68,9 +68,9 @@ const experience = [
     company: 'UPenn Hack4Impact',
     dates: 'Nov 2023 - Present',
     description: [
-      'Directed 10-developer team delivering mission-critical applications for nonprofits with 100% on-time delivery rate',
+      'Directed 10-developer team delivering critical applications for nonprofits',
       'Built full-stack data analytics dashboard for a national food bank network, processing 100K+ distribution records and reducing reporting time by 80%',
-      'Created automated deployment platform using Terraform, Docker, and GitHub Actions, reducing client deployment time from 2 weeks to 2 hours',
+      'Worked on automated deployment platform using Terraform, Docker, and GitHub Actions, reducing client deployment time from 2 weeks to 2 hours',
     ],
     technologies: ['React', 'Next.js', 'Terraform', 'Docker', 'GitHub Actions', 'Node.js'],
   },
